@@ -7,5 +7,4 @@ RUN go get github.com/golang/dep/cmd/dep
 
 # Install go-bindata
 RUN go get github.com/jteeuwen/go-bindata
-RUN cd $GOPATH/src/github.com/jteeuwen/go-bindata/go-bindata
-RUN go install
+RUN cd $GOPATH/src/github.com/jteeuwen/go-bindata/go-bindata && go install
