@@ -1,4 +1,4 @@
-FROM circleci/golang:1.8
+FROM circleci/golang:1.9
 
 # Install dep
 RUN go get github.com/golang/dep/cmd/dep
