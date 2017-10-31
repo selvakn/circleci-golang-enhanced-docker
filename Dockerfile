@@ -1,10 +1,8 @@
 FROM circleci/golang:1.9
 
 # Install dep
-RUN go get github.com/golang/dep/cmd/dep
-# RUN cd $GOPATH/src/github.com/golang/dep/cmd/dep
-# RUN go install
+RUN curl -sL https://github.com/golang/dep/releases/download/v0.3.2/dep-linux-amd64 > /go/bin/dep
+RUN chmod +x /go/bin/dep
 
 # Install go-bindata
-RUN go get github.com/jteeuwen/go-bindata
-RUN cd $GOPATH/src/github.com/jteeuwen/go-bindata/go-bindata && go install
+RUN go get -u github.com/jteeuwen/go-bindata/...
